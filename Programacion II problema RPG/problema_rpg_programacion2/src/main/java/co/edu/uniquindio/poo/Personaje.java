@@ -1,6 +1,8 @@
 package co.edu.uniquindio.poo;
 
-public abstract class Personaje{
+import java.util.ArrayList;
+
+public class Personaje{
     private String nombre;
     private String descripcion;
     private String apodo;
@@ -14,7 +16,6 @@ public abstract class Personaje{
         this.descripcion = descripcion;
         this.apodo = apodo;
         this.dineroInicial = dineroInicial;
-        //listaPersonajes = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -55,8 +56,4 @@ public abstract class Personaje{
     public void setDineroInicial(double dineroInicial) {
         this.dineroInicial = dineroInicial;
     }
-
-    /*Aquí se puede evidenciar el principio número 3 sustitución de Liskov donde esta clase abstracta
-    puede sustituir a sus clases hijas, ya que cada una de ellas son un tipo de personajes
-*/
 }
