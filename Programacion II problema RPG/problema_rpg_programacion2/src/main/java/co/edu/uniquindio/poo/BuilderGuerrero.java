@@ -43,4 +43,4 @@ public class BuilderGuerrero implements BuilderPersonaje {
     @Override
     public Personaje buildPersonaje() {
         return new Guerrero(nombre, descripcion, apodo, dineroInicial, fuerza, resistencia, vitalidad);}
-}
+}//Acá en el personaje es que el constructor del producto coincida con los datos del builder, por eso no tendía a funcionar, porque hacían falta unos datos
