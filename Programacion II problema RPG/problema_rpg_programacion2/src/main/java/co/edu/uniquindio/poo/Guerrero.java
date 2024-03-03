@@ -10,31 +10,24 @@ public class Guerrero extends Personaje{
         assert fuerza > 0 && resistencia > 0 && vitalidad > 0 : "Error: Las habilidades deben ser mínimo 1";
         this.fuerza = fuerza;
         this.resistencia = resistencia;
-        this.vitalidad = vitalidad;
-    }
+        this.vitalidad = vitalidad;}
 
     public int getFuerza() {
-        return fuerza;
-    }
+        return fuerza;}
 
     public void setFuerza(int fuerza) {
-        this.fuerza = fuerza;
-    }
+        this.fuerza = fuerza;}
 
     public int getResistencia() {
-        return resistencia;
-    }
+        return resistencia;}
 
     public void setResistencia(int resistencia) {
-        this.resistencia = resistencia;
-    }
+        this.resistencia = resistencia;}
 
     public int getVitalidad() {
-        return vitalidad;
-    }
+        return vitalidad;}
 
     public void setVitalidad(int vitalidad) {
-        this.vitalidad = vitalidad;
-    }
+        this.vitalidad = vitalidad;}
 
 }

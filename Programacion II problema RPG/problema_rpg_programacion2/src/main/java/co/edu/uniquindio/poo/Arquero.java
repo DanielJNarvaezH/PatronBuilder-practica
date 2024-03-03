@@ -10,26 +10,23 @@ public class Arquero extends Personaje{
         assert destreza  > 0 && agilidad > 0 && precision > 0 : "Error: Las habilidades deben ser mínimo 1";
         this.destreza = destreza;
         this.agilidad = agilidad;
-        this.precision = precision;
-    }
+        this.precision = precision;}
+
     public int getDestreza() {
-        return destreza;
-    }
+        return destreza;}
+
     public void setDestreza(int destreza) {
-        this.destreza = destreza;
-    }
+        this.destreza = destreza;}
+
     public int getAgilidad() {
-        return agilidad;
-    }
+        return agilidad;}
+
     public void setAgilidad(int agilidad) {
-        this.agilidad = agilidad;
-    }
+        this.agilidad = agilidad;}
+
     public int getPrecision() {
-        return precision;
-    }
+        return precision;}
+
     public void setPrecision(int precision) {
-        this.precision = precision;
-    }
-    
-    
+        this.precision = precision;}
 }

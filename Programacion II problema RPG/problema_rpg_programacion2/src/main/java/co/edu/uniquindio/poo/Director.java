@@ -6,9 +6,7 @@ public class Director {
     private BuilderPersonaje builder;
 
     public Director(BuilderPersonaje builder){
-
-        this.builder = builder;
-    }
+        this.builder = builder;}
 
     public void construccion(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades){
 
@@ -16,7 +14,5 @@ public class Director {
         builder.buildDescripcion(descripcion);
         builder.buildApodo(apodo);
         builder.buildDineroInicial(dineroInicial);
-        builder.buildHabilidades(listaHabilidades);
-    
-    }
+        builder.buildHabilidades(listaHabilidades);}
 }
