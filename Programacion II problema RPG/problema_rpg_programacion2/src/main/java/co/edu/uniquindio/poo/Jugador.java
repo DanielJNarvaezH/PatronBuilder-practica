@@ -32,7 +32,4 @@ public class Jugador  {
     private Optional<Personaje> buscarPersonajePorNombre(String nombre) {
         Predicate<Personaje> condicion = personaje ->  personaje.getNombre().equals(nombre);
         return listaPersonajes.stream().filter(condicion).findAny();}
-
 }
-
-    

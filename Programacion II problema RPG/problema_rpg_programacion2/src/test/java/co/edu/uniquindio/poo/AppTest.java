@@ -31,4 +31,15 @@ public class AppTest {
        
             LOG.info("Finalizando test shouldAnswerWithTrue");
         }
+    @Test
+        public void pruebaBuilderPersonaje(){
+            LOG.info("Iniciando prueba de los Builder de los personajes");
+
+            VideojuegoRPG juego1 = new VideojuegoRPG("Arcangel");
+            Jugador j1=new Jugador("Pepe");
+            juego1.registrarJugador(j1);
+            //Creacion de un personaje con todos sus atributos por defecto
+            Director directorPorDefecto = Director.build();
+            
+        }
 }

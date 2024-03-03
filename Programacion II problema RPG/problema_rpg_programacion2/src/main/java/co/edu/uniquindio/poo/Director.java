@@ -8,7 +8,7 @@ public class Director {
     public Director(BuilderPersonaje builder){
         this.builder = builder;}
 
-    public void construccion(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades){
+    public void build(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades){
 
         builder.buildNombre(nombre);
         builder.buildDescripcion(descripcion);
