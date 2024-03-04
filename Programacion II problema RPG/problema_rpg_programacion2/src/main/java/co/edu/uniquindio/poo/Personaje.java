@@ -7,6 +7,7 @@ public class Personaje{
     private String descripcion;
     private String apodo;
     private double dineroInicial;
+    private ArrayList<String> listaHabilidades;
   
 
 
@@ -16,7 +17,11 @@ public class Personaje{
         this.descripcion = descripcion;
         this.apodo = apodo;
         this.dineroInicial = dineroInicial;
+        this.listaHabilidades = listaHabilidades;
     }
+
+
+    
 
     public String getNombre() {
         return nombre;
@@ -55,5 +60,19 @@ public class Personaje{
 
     public void setDineroInicial(double dineroInicial) {
         this.dineroInicial = dineroInicial;
+    }
+
+
+
+
+    public ArrayList<String> getListaHabilidades() {
+        return listaHabilidades;
+    }
+
+
+
+
+    public void setListaHabilidades(ArrayList<String> listaHabilidades) {
+        this.listaHabilidades = listaHabilidades;
     }
 }

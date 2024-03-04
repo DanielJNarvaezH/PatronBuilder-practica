@@ -32,24 +32,33 @@ public class BuilderMago implements BuilderPersonaje{
         this.listaHabilidades = listaHabilidades;
     }
 
-    public BuilderMago inteligencia(int inteligencia){
+    public BuilderMago builInteligencia(int inteligencia){
         this.inteligencia = inteligencia;
         return this;
     }
 
-    public BuilderMago sabiduria(int sabiduria){
+    public BuilderMago buildSabiduria(int sabiduria){
         this.sabiduria= sabiduria;
         return this;
     }
     
-    public BuilderMago energiaMagica(int energiaMagica){
+    public BuilderMago buildEnergiaMagica(int energiaMagica){
         this.energiaMagica = energiaMagica;
         return this;
     }
 
     @Override
     public Personaje buildPersonaje() {
-        return new Mago(nombre, descripcion, apodo, dineroInicial, inteligencia, sabiduria, energiaMagica);
+        Personaje personaje = new Mago();
+        personaje.setNombre(nombre);
+        personaje.setDescripcion(descripcion);
+        personaje.setApodo(apodo);
+        personaje.setDineroInicial(dineroInicial);
+        personaje.setListaHabilidades(listaHabilidades);
+        personaje.Mago.setInteligencia(inteligencia);
+        personaje.setSabiduria(sabiduria);
+        personaje.setEnergiaMagica(energiaMagica);
+        return personaje;
     }
 
 }
