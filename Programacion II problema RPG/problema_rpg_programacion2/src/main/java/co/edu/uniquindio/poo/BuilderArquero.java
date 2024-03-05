@@ -6,6 +6,7 @@ public class BuilderArquero implements BuilderPersonaje {
 
     private String nombre, descripcion, apodo;
     private double dineroInicial;
+    private int destreza, agilidad, precision;
     private ArrayList<String> listaHabilidades;
 
     @Override
@@ -33,8 +34,30 @@ public class BuilderArquero implements BuilderPersonaje {
         this.listaHabilidades = listaHabilidades;
     }
 
+    public BuilderArquero builInteligencia(int destreza){
+        this.destreza = destreza;
+        return this;}
+
+    public BuilderArquero buildAgilidad(int agilidad){
+        this.agilidad = agilidad;
+        return this;}
+    
+    public BuilderArquero buildEnergiaMagica(int precision){
+        this.precision = precision;
+        return this;}
+
     @Override
     public Personaje buildPersonaje() {
-        
+
+        Personaje personaje = new Arquero();
+        personaje.setNombre(nombre);
+        personaje.setDescripcion(descripcion);
+        personaje.setApodo(apodo);
+        personaje.setDineroInicial(dineroInicial);
+        personaje.setListaHabilidades(listaHabilidades);
+        ((Arquero)personaje).setAgilidad(agilidad);
+        ((Arquero)personaje).setDestreza(destreza);
+        ((Arquero)personaje).setPrecision(precision);
+        return personaje;
     }
 }

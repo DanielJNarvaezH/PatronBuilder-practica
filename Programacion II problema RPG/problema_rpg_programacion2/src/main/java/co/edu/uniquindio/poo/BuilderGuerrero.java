@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class BuilderGuerrero implements BuilderPersonaje {
     private String nombre, descripcion, apodo;
     private double dineroInicial;
+    private int fuerza, resistencia, vitalidad;
     private ArrayList<String> listaHabilidades;
     
     @Override
@@ -32,9 +33,36 @@ public class BuilderGuerrero implements BuilderPersonaje {
         this.listaHabilidades = listaHabilidades;
     }
 
+    public BuilderGuerrero builFuerza(int fuerza){
+        this.fuerza = fuerza;
+        return this;
+    }
+
+    public BuilderGuerrero buildSabiduria(int resistencia){
+        this.resistencia = resistencia;
+        return this;
+    }
+    
+    public BuilderGuerrero buildEnergiaMagica(int vitalidad){
+        this.vitalidad = vitalidad;
+        return this;
+    }
+
+
+
     @Override
     public Personaje buildPersonaje() {
-        return new Personaje (nombre, descripcion, apodo, dineroInicial, listaHabilidades);
+
+        Personaje personaje = new Guerrero();
+        personaje.setNombre(nombre);
+        personaje.setDescripcion(descripcion);
+        personaje.setApodo(apodo);
+        personaje.setDineroInicial(dineroInicial);
+        personaje.setListaHabilidades(listaHabilidades);
+        ((Guerrero)personaje).setFuerza(fuerza);
+        ((Guerrero)personaje).setResistencia(resistencia);
+        ((Guerrero)personaje).setVitalidad(vitalidad);
+        return personaje;
     }
 
 }

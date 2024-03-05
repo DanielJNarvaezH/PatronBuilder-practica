@@ -5,13 +5,17 @@ public class Arquero extends Personaje{
     private int agilidad;
     private int precision;
 
-    public Arquero(String nombre, String descripcion, String apodo, double dineroInicial, int destreza, int agilidad, int precision) {
+    /*public Arquero(String nombre, String descripcion, String apodo, double dineroInicial, int destreza, int agilidad, int precision) {
         super(nombre, descripcion, apodo, dineroInicial);
         assert destreza  > 0 && agilidad > 0 && precision > 0 : "Error: Las habilidades deben ser mínimo 1";
         this.destreza = destreza;
         this.agilidad = agilidad;
         this.precision = precision;
+    }*/
+    public Arquero(){
+        
     }
+
     public int getDestreza() {
         return destreza;
     }

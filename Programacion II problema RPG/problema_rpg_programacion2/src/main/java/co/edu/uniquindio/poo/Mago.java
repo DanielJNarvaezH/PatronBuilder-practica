@@ -1,18 +1,22 @@
 package co.edu.uniquindio.poo;
 
-import java.util.ArrayList;
 
 public class Mago extends Personaje{
     private int inteligencia;
     private int sabiduria;
     private int  energiaMagica;
+   
 
-    public Mago(String nombre, String descripcion, String apodo, double dineroInicial, int inteligencia, int sabiduria, int energiaMagica) {
+    /*public Mago(String nombre, String descripcion, String apodo, double dineroInicial, int inteligencia, int sabiduria, int energiaMagica) {
         super(nombre, descripcion, apodo, dineroInicial);
         assert inteligencia > 0 && sabiduria > 0 && energiaMagica > 0 : "Error: Las habilidades deben ser mínimo 1";
         this.inteligencia = inteligencia;
         this.sabiduria = sabiduria;
         this.energiaMagica = energiaMagica;
+
+    }*/
+
+    public Mago(){
 
     }
 

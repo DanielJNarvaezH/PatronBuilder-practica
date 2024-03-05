@@ -11,13 +11,17 @@ public class Personaje{
   
 
 
-    public Personaje(String nombre, String descripcion, String apodo, double dineroInicial) {
+    /*public Personaje(String nombre, String descripcion, String apodo, double dineroInicial) {
         assert dineroInicial >= 0: "El dinero no puede ser negativo";
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.apodo = apodo;
         this.dineroInicial = dineroInicial;
         this.listaHabilidades = listaHabilidades;
+    }*/
+
+    public Personaje(){
+        this.listaHabilidades = new ArrayList<>();
     }
 
 
