@@ -33,17 +33,17 @@ public class BuilderGuerrero implements BuilderPersonaje {
         this.listaHabilidades = listaHabilidades;
     }
 
-    public BuilderGuerrero builFuerza(int fuerza){
+    public BuilderGuerrero buildFuerza(int fuerza){
         this.fuerza = fuerza;
         return this;
     }
 
-    public BuilderGuerrero buildSabiduria(int resistencia){
+    public BuilderGuerrero buildResistencia(int resistencia){
         this.resistencia = resistencia;
         return this;
     }
     
-    public BuilderGuerrero buildEnergiaMagica(int vitalidad){
+    public BuilderGuerrero buildVitalidad(int vitalidad){
         this.vitalidad = vitalidad;
         return this;
     }

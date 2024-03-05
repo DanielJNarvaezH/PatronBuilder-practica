@@ -34,7 +34,7 @@ public class BuilderArquero implements BuilderPersonaje {
         this.listaHabilidades = listaHabilidades;
     }
 
-    public BuilderArquero builInteligencia(int destreza){
+    public BuilderArquero buildDestreza(int destreza){
         this.destreza = destreza;
         return this;}
 
@@ -42,7 +42,7 @@ public class BuilderArquero implements BuilderPersonaje {
         this.agilidad = agilidad;
         return this;}
     
-    public BuilderArquero buildEnergiaMagica(int precision){
+    public BuilderArquero buildPrecision(int precision){
         this.precision = precision;
         return this;}
 
