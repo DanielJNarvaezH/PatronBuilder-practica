@@ -39,8 +39,6 @@ public class DirectorPersonaje {
         builderArquero.buildPrecision(precision);
         return builderArquero.buildPersonaje();
     }
-//Crear un builder general, de allí hacer el cast que se menciona a continuacón
-//Crear un cast para que el director sepa que tipo de  personaje va a construir
     
     public Personaje buildGuerrero(String nombre, String descripcion, String apodo, double dineroInicial, List<String> list, int fuerza, int resistencia, int vitalidad){
         buildPersonaje(nombre, descripcion, apodo, dineroInicial, list);

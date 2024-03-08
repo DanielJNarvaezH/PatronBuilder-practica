@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Prueba {
     public static void main(String[] args) {
-        BuilderPersonaje builderGuerrero = new BuilderGuerrero();
-        BuilderPersonaje builderMago = new BuilderMago();
-        BuilderPersonaje builderArquero = new BuilderArquero();
+        BuilderGuerrero builderGuerrero = new BuilderGuerrero();
+        BuilderMago builderMago = new BuilderMago();
+        BuilderArquero builderArquero = new BuilderArquero();
         DirectorPersonaje directorGuerrero = new DirectorPersonaje(builderGuerrero);
         DirectorPersonaje directorMago = new DirectorPersonaje(builderMago);
-        DirectorPersonaje directorArquero = new DirectorPersonaje(builderArquero);
+        DirectorPersonaje  directorArquero = new DirectorPersonaje(builderArquero);
 
 
         // Construir un guerrero
