@@ -40,6 +40,7 @@ public class BuilderGuerrero implements BuilderPersonaje {
     }
 
     public BuilderGuerrero buildFuerza(int fuerza){
+        assert fuerza != 0: "La fuerza no puede ser 0";
         this.fuerza = fuerza;
         return this;
     }
