@@ -3,52 +3,50 @@ package co.edu.uniquindio.poo;
 import java.util.ArrayList;
 
 public class DirectorPersonaje {
-    private BuilderMago builderM;
-    private BuilderArquero builderA;
-    private BuilderGuerrero builderG;
+    private BuilderPersonaje builderPersonaje;
+    private BuilderMago builderMago;
+    private BuilderArquero builderArquero;
+    private BuilderGuerrero builderGuerrero;
+    
 
-    public DirectorPersonaje(BuilderMago builderM, BuilderArquero builderA, BuilderGuerrero builderG){
-
-        this.builderM = builderM;
-        this.builderA = builderA;
-        this.builderG = builderG;
+    public DirectorPersonaje(BuilderPersonaje builderPersonaje){
+        this.builderPersonaje = builderPersonaje;
     }
 
-    public Personaje builderMago(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades, int inteligencia, int sabiduria, int energiaMagica){
+    public Personaje buildPersonaje(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades){
+        //Metodos para construir el personaje
+        builderPersonaje.buildNombre(nombre);
+        builderPersonaje.buildDescripcion(descripcion);
+        builderPersonaje.buildApodo(apodo);
+        builderPersonaje.buildDineroInicial(dineroInicial);
+        builderPersonaje.buildHabilidades(listaHabilidades);
+        return builderPersonaje.buildPersonaje();
+    }
 
-        builderM.buildNombre(nombre);
-        builderM.buildDescripcion(descripcion);
-        builderM.buildApodo(apodo);
-        builderM.buildDineroInicial(dineroInicial);
-        builderM.buildHabilidades(listaHabilidades);
-        builderM.buildInteligencia(inteligencia);
-        builderM.buildSabiduria(sabiduria);
-        builderM.buildEnergiaMagica(energiaMagica);
-        return builderM.buildPersonaje();
+    public Personaje buildMago(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades, int inteligencia, int sabiduria, int energiaMagica){
+        buildPersonaje(nombre, descripcion, apodo, dineroInicial, listaHabilidades);
+        builderMago.buildInteligencia(inteligencia);
+        builderMago.buildSabiduria(sabiduria);
+        builderMago.buildEnergiaMagica(energiaMagica);
+        return builderMago.buildPersonaje();
     
     }
 
-    public Personaje builderArquero(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades, int destreza, int agilidad, int precision){
-        builderA.buildNombre(nombre);
-        builderA.buildDescripcion(descripcion);
-        builderA.buildApodo(apodo);
-        builderA.buildDineroInicial(dineroInicial);
-        builderA.buildHabilidades(listaHabilidades);
-        builderA.buildDestreza(destreza);
-        builderA.buildAgilidad(agilidad);
-        builderA.buildPrecision(precision);
-        return builderA.buildPersonaje();
+    public Personaje buildArquero(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades, int destreza, int agilidad, int precision){
+        buildPersonaje(nombre, descripcion, apodo, dineroInicial, listaHabilidades);
+        builderArquero.buildDestreza(destreza);
+        builderArquero.buildAgilidad(agilidad);
+        builderArquero.buildPrecision(precision);
+        return builderArquero.buildPersonaje();
     }
-
-    public Personaje builderGuerrero(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades, int fuerza, int resistencia, int vitalidad){
-        builderG.buildNombre(nombre);
-        builderG.buildDescripcion(descripcion);
-        builderG.buildApodo(apodo);
-        builderG.buildDineroInicial(dineroInicial);
-        builderG.buildHabilidades(listaHabilidades);
-        builderG.buildFuerza(fuerza);
-        builderG.buildResistencia(resistencia);
-        builderG.buildVitalidad(vitalidad);
-        return builderA.buildPersonaje();
+//Crear un builder general, de allí hacer el cast que se menciona a continuacón
+//Crear un cast para que el director sepa que tipo de  personaje va a construir
+    
+    public Personaje buildGuerrero(String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades, int fuerza, int resistencia, int vitalidad){
+        buildPersonaje(nombre, descripcion, apodo, dineroInicial, listaHabilidades);
+        builderGuerrero.buildFuerza(fuerza);
+        builderGuerrero.buildResistencia(resistencia);
+        builderGuerrero.buildVitalidad(vitalidad);
+        return builderGuerrero.buildPersonaje();
     }
 }

@@ -1,12 +1,19 @@
 package co.edu.uniquindio.poo;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class BuilderMago implements BuilderPersonaje{
     private String nombre, descripcion, apodo;
     private double dineroInicial;
     private int inteligencia,sabiduria, energiaMagica;
-    private ArrayList<String> listaHabilidades;
+    private List<String> listaHabilidades;
+
+    public BuilderMago() {
+        this.listaHabilidades = new ArrayList<>();
+      
+    }
 
     @Override
     public void buildNombre(String nombre) {
@@ -52,6 +59,8 @@ public class BuilderMago implements BuilderPersonaje{
         ((Mago)personaje).setInteligencia(inteligencia);
         ((Mago)personaje).setSabiduria(sabiduria);
         ((Mago)personaje).setEnergiaMagica(energiaMagica);
+        
+
         return personaje;
     }
 
