@@ -70,4 +70,15 @@ public class Personaje{
     public void setListaHabilidades(List<String> listaHabilidades) {
         this.listaHabilidades = listaHabilidades;
     }
+
+
+    @Override
+    public String toString() {
+        return "Personaje{" +
+                "nombre='" + nombre + '\'' +
+                ", descripción='" + descripcion + '\'' +
+                ", apodo=" + apodo +
+                ", lista de Habilidades" + listaHabilidades +
+                '}';
+    }
 }

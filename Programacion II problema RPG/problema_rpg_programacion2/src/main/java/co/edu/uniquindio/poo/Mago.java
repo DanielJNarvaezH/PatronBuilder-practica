@@ -33,4 +33,14 @@ public class Mago extends Personaje{
     public void setEnergiaMagica(int energiaMagica) {
         this.energiaMagica = energiaMagica;
     }
+
+    
+    @Override
+    public String toString() {
+        return super.toString() +
+                "inteligencia='" + inteligencia + '\'' +
+                ", sabiduria='" + sabiduria + '\'' +
+                ", energía Mágica=" + energiaMagica +
+                '}';
+    }
 }

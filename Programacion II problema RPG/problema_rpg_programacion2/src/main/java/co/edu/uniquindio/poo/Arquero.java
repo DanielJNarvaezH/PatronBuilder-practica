@@ -27,6 +27,15 @@ public class Arquero extends Personaje{
     public void setPrecision(int precision) {
         this.precision = precision;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "destreza='" + destreza + '\'' +
+                ", agilidad='" + agilidad + '\'' +
+                ", precision=" + precision +
+                '}';
+    }
     
     
 }

@@ -33,4 +33,13 @@ public class Guerrero extends Personaje{
         this.vitalidad = vitalidad;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                "fuerza='" + fuerza + '\'' +
+                ", resistencia='" + resistencia + '\'' +
+                ", vitalidad=" + vitalidad +
+                '}';
+    }
+
 }
