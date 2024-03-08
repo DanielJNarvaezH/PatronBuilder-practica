@@ -35,7 +35,7 @@ public class BuilderGuerrero implements BuilderPersonaje {
     }
 
     @Override
-    public void buildHabilidades(ArrayList<String> listaHabilidades) {
+    public void buildHabilidades(List<String> listaHabilidades) {
         this.listaHabilidades = listaHabilidades;
     }
 
