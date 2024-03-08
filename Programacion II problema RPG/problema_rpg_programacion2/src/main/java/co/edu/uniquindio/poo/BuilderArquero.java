@@ -1,13 +1,19 @@
 package co.edu.uniquindio.poo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BuilderArquero implements BuilderPersonaje {
 
     private String nombre, descripcion, apodo;
     private double dineroInicial;
     private int destreza, agilidad, precision;
-    private ArrayList<String> listaHabilidades;
+    private List<String> listaHabilidades;
+
+    public BuilderArquero() {
+        this.listaHabilidades = new ArrayList<>();
+      
+    }
 
     @Override
     public void buildNombre(String nombre) {

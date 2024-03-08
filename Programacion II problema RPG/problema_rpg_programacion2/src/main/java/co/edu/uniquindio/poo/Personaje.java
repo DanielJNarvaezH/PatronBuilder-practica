@@ -1,24 +1,16 @@
 package co.edu.uniquindio.poo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Personaje{
     private String nombre;
     private String descripcion;
     private String apodo;
     private double dineroInicial;
-    private ArrayList<String> listaHabilidades;
+    private List<String> listaHabilidades;
   
 
-
-    /*public Personaje(String nombre, String descripcion, String apodo, double dineroInicial) {
-        assert dineroInicial >= 0: "El dinero no puede ser negativo";
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.apodo = apodo;
-        this.dineroInicial = dineroInicial;
-        this.listaHabilidades = listaHabilidades;
-    }*/
 
     public Personaje(){
         this.listaHabilidades = new ArrayList<>();
@@ -68,15 +60,14 @@ public class Personaje{
 
 
 
-
-    public ArrayList<String> getListaHabilidades() {
+    public List<String> getListaHabilidades() {
         return listaHabilidades;
     }
 
 
 
 
-    public void setListaHabilidades(ArrayList<String> listaHabilidades) {
+    public void setListaHabilidades(List<String> listaHabilidades) {
         this.listaHabilidades = listaHabilidades;
     }
 }

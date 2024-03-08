@@ -5,14 +5,6 @@ public class Guerrero extends Personaje{
     private int resistencia;
     private int vitalidad;
 
-    /*public Guerrero(String nombre, String descripcion, String apodo, double dineroInicial, int fuerza, int resistencia, int vitalidad) {
-        super(nombre, descripcion, apodo, dineroInicial);
-        assert fuerza > 0 && resistencia > 0 && vitalidad > 0 : "Error: Las habilidades deben ser mínimo 1";
-        this.fuerza = fuerza;
-        this.resistencia = resistencia;
-        this.vitalidad = vitalidad;
-    }*/
-
     public Guerrero(){
         
     }

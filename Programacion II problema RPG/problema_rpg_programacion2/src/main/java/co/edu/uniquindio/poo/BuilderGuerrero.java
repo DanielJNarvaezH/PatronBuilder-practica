@@ -1,12 +1,18 @@
 package co.edu.uniquindio.poo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BuilderGuerrero implements BuilderPersonaje {
     private String nombre, descripcion, apodo;
     private double dineroInicial;
     private int fuerza, resistencia, vitalidad;
-    private ArrayList<String> listaHabilidades;
+    private List<String> listaHabilidades;
+
+    public BuilderGuerrero() {
+        this.listaHabilidades = new ArrayList<>();
+      
+    }
     
     @Override
     public void buildNombre(String nombre) {

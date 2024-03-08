@@ -35,17 +35,27 @@ public class Jugador  {
 
         return listaPersonajes.stream().filter(condicion).findAny();
     }
-    /*Aquí se puede evidenciar el principio número 3 sustitución de Liskov donde esta clase abstracta
-    puede sustituir a sus clases hijas, ya que cada una de ellas son un tipo de personajes
-*/
 
-
-    public void adicionarPersonaje( String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades){
+    public void adicionarMago( String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades, int inteligencia, int sabiduria, int energiaMagica){
         BuilderMago builder = new BuilderMago();
         director = new DirectorPersonaje(builder);
-        director.construccion(nombre, descripcion, apodo, dineroInicial, listaHabilidades);
-        
+        director.buildMago(nombre, descripcion, apodo, dineroInicial, listaHabilidades, inteligencia, sabiduria, energiaMagica);
         listaPersonajes.add(builder.buildPersonaje());
     }
+
+        public void adicionarArquero( String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades,int destreza,int agilidad, int precision){
+        BuilderArquero builder = new BuilderArquero();
+        director = new DirectorPersonaje(builder);
+        director.buildArquero(nombre, descripcion, apodo, dineroInicial, listaHabilidades, destreza, agilidad, precision);
+        listaPersonajes.add(builder.buildPersonaje());
+    }
+    
+    public void adicionarGuerero( String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades,int fuerza,int resistencia, int vitalidad){
+        BuilderGuerrero builder = new BuilderGuerrero();
+        director = new DirectorPersonaje(builder);
+        director.buildGuerrero(nombre, descripcion, apodo, dineroInicial, listaHabilidades, fuerza, resistencia, vitalidad);
+        listaPersonajes.add(builder.buildPersonaje());
+    }
+
 }
 

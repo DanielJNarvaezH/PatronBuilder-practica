@@ -9,12 +9,22 @@ import java.util.function.Predicate;
 public class VideojuegoRPG {
     private String nombre;
     private Collection<Jugador> listaJugadores;
-    
+    private static VideojuegoRPG instance;
+
     public VideojuegoRPG(String nombre) {
-        assert  !nombre.isEmpty() : "El nombre del videojuego no puede estar vacío";
+        assert !nombre.isEmpty() : "El nombre del videojuego no puede estar vacío";
         this.nombre = nombre;
         this.listaJugadores = new ArrayList<>();
     }
+
+    public static VideojuegoRPG getInstance(String nombre) {
+        if (instance == null) {
+            instance = new VideojuegoRPG(nombre);
+        }
+        return instance;
+    }
+
+
 
     public String getNombre() {
         return nombre;
@@ -40,5 +50,7 @@ public class VideojuegoRPG {
         Predicate<Jugador> condicion = jugador ->  jugador.getId().equals(id);
         return listaJugadores.stream().filter(condicion).findAny();
     }
+
+
 
 }
