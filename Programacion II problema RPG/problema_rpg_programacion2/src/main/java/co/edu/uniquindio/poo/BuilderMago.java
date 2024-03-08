@@ -32,7 +32,7 @@ public class BuilderMago implements BuilderPersonaje{
         this.dineroInicial = dineroInicial;}
 
     @Override
-    public void buildHabilidades(ArrayList<String> listaHabilidades) {
+    public void buildHabilidades(List<String> listaHabilidades) {
         this.listaHabilidades = listaHabilidades;}
 
     public BuilderMago buildInteligencia(int inteligencia){
