@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Prueba {
     public static void main(String[] args) {
-        BuilderGuerrero builderGuerrero = new BuilderGuerrero();
-        BuilderMago builderMago = new BuilderMago();
-        BuilderArquero builderArquero = new BuilderArquero();
+        BuilderPersonaje builderGuerrero = new BuilderGuerrero();
+        BuilderPersonaje builderMago = new BuilderMago();
+        BuilderPersonaje builderArquero = new BuilderArquero();
         DirectorPersonaje directorGuerrero = new DirectorPersonaje(builderGuerrero);
         DirectorPersonaje directorMago = new DirectorPersonaje(builderMago);
         DirectorPersonaje  directorArquero = new DirectorPersonaje(builderArquero);
@@ -15,19 +15,18 @@ public class Prueba {
 
         // Construir un guerrero
         directorGuerrero.buildGuerrero("Argus","Angel de la oscuridad", "El inmortal", 10,
-                            List.of("Espada Afilada", "Golpe Definitivo", "Escudo Protector"),150, 782, 1032893);
+                            List.of("Espada Afilada", "Golpe Definitivo", "Escudo Protector"),150, 782, 1032893, (BuilderGuerrero) builderGuerrero);
         Personaje guerrero = builderGuerrero.buildPersonaje();
         System.out.println("Guerrero creado: " + guerrero);
 
         directorMago.buildMago("Gandalf", "Mago de la luz", "Sombrero gris", 10,
-                            List.of("Bola de fuego", "Rayo eléctrico", "Hechizo de curación"),
-                            500, 790, 650);
+                            List.of("Bola de fuego", "Rayo eléctrico", "Hechizo de curación"), 500, 790, 650, (BuilderMago) builderMago);
         Personaje mago = builderMago.buildPersonaje();
         System.out.println("Mago creado: " + mago);
 
         // Construir un arquero
         directorArquero.buildArquero("Legolas", "Flechín flechín", "Arco de hielo", 10,
-                          List.of("Disparo Rápido", "Flecha Venenosa", "Tiro Certero"),100, 200, 400);
+                          List.of("Disparo Rápido", "Flecha Venenosa", "Tiro Certero"),100, 200, 400, (BuilderArquero) builderArquero);
         Personaje arquero = builderArquero.buildPersonaje();
         System.out.println("Arquero creado: " + arquero);
     }

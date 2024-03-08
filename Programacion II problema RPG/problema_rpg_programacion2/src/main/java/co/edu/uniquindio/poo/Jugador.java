@@ -39,21 +39,21 @@ public class Jugador  {
     public void adicionarMago( String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades, int inteligencia, int sabiduria, int energiaMagica){
         BuilderMago builder = new BuilderMago();
         director = new DirectorPersonaje(builder);
-        director.buildMago(nombre, descripcion, apodo, dineroInicial, listaHabilidades, inteligencia, sabiduria, energiaMagica);
+        director.buildMago(nombre, descripcion, apodo, dineroInicial, listaHabilidades, inteligencia, sabiduria, energiaMagica, builder);
         listaPersonajes.add(builder.buildPersonaje());
     }
 
         public void adicionarArquero( String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades,int destreza,int agilidad, int precision){
         BuilderArquero builder = new BuilderArquero();
         director = new DirectorPersonaje(builder);
-        director.buildArquero(nombre, descripcion, apodo, dineroInicial, listaHabilidades, destreza, agilidad, precision);
+        director.buildArquero(nombre, descripcion, apodo, dineroInicial, listaHabilidades, destreza, agilidad, precision, builder);
         listaPersonajes.add(builder.buildPersonaje());
     }
     
     public void adicionarGuerero( String nombre, String descripcion, String apodo, double dineroInicial, ArrayList<String> listaHabilidades,int fuerza,int resistencia, int vitalidad){
         BuilderGuerrero builder = new BuilderGuerrero();
         director = new DirectorPersonaje(builder);
-        director.buildGuerrero(nombre, descripcion, apodo, dineroInicial, listaHabilidades, fuerza, resistencia, vitalidad);
+        director.buildGuerrero(nombre, descripcion, apodo, dineroInicial, listaHabilidades, fuerza, resistencia, vitalidad, builder);
         listaPersonajes.add(builder.buildPersonaje());
     }
 
